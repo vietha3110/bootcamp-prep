@@ -1,0 +1,9 @@
+//Flip every pair of characters in a string.
+
+function flipPairs(string) {
+  let result = [];
+  for (let i = 0; i < string.length; i = i + 2) {
+    result.push(string[i + 1], string[i];
+  }
+  return result;
+}
