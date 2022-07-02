@@ -1,0 +1,12 @@
+//Given a list of non-negative integers and a target sum, find a pair of numbers that sums to the target sum.
+
+
+function findPairForSum(array, num) {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[i] + array[j] === num) {
+        return array[i] + " " + array[j];
+      }
+     }
+   }
+       
