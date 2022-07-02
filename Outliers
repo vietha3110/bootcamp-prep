@@ -1,0 +1,23 @@
+//Given a string of even and odd numbers, find which is the sole even number or the sole odd number.
+//The return value should be 1-indexed, not 0-indexed.
+
+function detectNumber(st) {
+  string = st.split("");
+  let arrayE = [];
+  let arrayO = [];
+  let countE = 0; 
+  let countO = 0;
+  for (let i = 0; i < string.length; i++) {
+    if (Number(string[i]) % 2 === 0) {
+      countE = countE + 1;
+      arrayE.push(string.indexOf(string[i]);
+    } else {
+      countO = countO + 1;
+      arrayO.push(string.indexOf(string[i];
+    }
+    if (countE === 1) {
+      return arrayE[0] + 1;
+    }
+    if (countO === 1) {
+      return arrayO[0] + 1;
+    }
