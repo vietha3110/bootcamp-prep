@@ -1,0 +1,22 @@
+//Is one string a rotated version of another?
+//For example:
+//String 1: 'hello world'
+//String 2: 'orldhello w'
+
+function subString(st, a, b) {
+  let result = "";
+  for (let i = a; i <= b; i++) {
+    result = result + st[i];
+}
+
+function isRotated(string1, string2) {
+    if(string1.length !== string2.length) {
+      return false; 
+    }
+    for (let i = 0; i < string1.length; i++) {
+      if ((subString(string1, i, string1.length-1) + subString(string1, 0, i - 1)) === string2) {
+            return true;
+        }
+    }
+    return false;
+}
